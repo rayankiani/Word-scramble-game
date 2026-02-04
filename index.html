@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrambleX - Neural Word Puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="logo">SCRAMBLEX</h1>
+            <p class="tagline">Neural Word Puzzle</p>
+        </header>
+
+        <!-- Start Screen -->
+        <div class="start-screen" id="startScreen">
+            <h2>Welcome to the Future of Word Games</h2>
+            <p>Decode scrambled words, race against time, and prove your neural processing power.<br>Select your difficulty level to begin.</p>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button class="difficulty-btn" data-difficulty="easy">
+                <span>Easy</span>
+            </button>
+            <button class="difficulty-btn active" data-difficulty="medium">
+                <span>Medium</span>
+            </button>
+            <button class="difficulty-btn" data-difficulty="hard">
+                <span>Hard</span>
+            </button>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-card">
+                <div class="stat-label">Score</div>
+                <div class="stat-value" id="scoreValue">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Level</div>
+                <div class="stat-value" id="levelValue">1</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Streak</div>
+                <div class="stat-value" id="streakValue">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Timer</div>
+                <div class="stat-value" id="timerValue">30</div>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board hidden" id="gameBoard">
+            <div class="word-display">
+                <p style="font-size: 0.9rem; color: rgba(0, 255, 249, 0.5); margin-bottom: 10px; letter-spacing: 0.2em;">DECODE THIS</p>
+                <div class="scrambled-word" id="scrambledWord">READY</div>
+                <p class="hint-text" id="hintText"></p>
+            </div>
+
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    class="word-input" 
+                    id="wordInput" 
+                    placeholder="TYPE HERE"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="submitBtn">Submit</button>
+                <button class="btn btn-secondary" id="hintBtn">Hint (-5 pts)</button>
+                <button class="btn btn-secondary" id="skipBtn">Skip</button>
+            </div>
+
+            <div class="feedback-message" id="feedbackMessage"></div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2 class="modal-title">MISSION COMPLETE</h2>
+            <div class="modal-stats">
+                <div class="modal-stat-line">
+                    <span class="modal-stat-label">Final Score</span>
+                    <span class="modal-stat-value" id="finalScore">0</span>
+                </div>
+                <div class="modal-stat-line">
+                    <span class="modal-stat-label">Words Solved</span>
+                    <span class="modal-stat-value" id="wordsSolved">0</span>
+                </div>
+                <div class="modal-stat-line">
+                    <span class="modal-stat-label">Best Streak</span>
+                    <span class="modal-stat-value" id="bestStreak">0</span>
+                </div>
+                <div class="modal-stat-line">
+                    <span class="modal-stat-label">Accuracy</span>
+                    <span class="modal-stat-value" id="accuracy">0%</span>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="playAgainBtn" style="margin-top: 20px;">Play Again</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
