@@ -622,6 +622,109 @@
             }
         }
 
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            header {
+                padding: 20px 10px;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 0.9rem;
+            }
+
+            .game-controls {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .difficulty-btn {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .stats-panel {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .stat-card {
+                padding: 10px;
+            }
+
+            .stat-value {
+                font-size: 1.2rem;
+            }
+
+            .game-board {
+                padding: 15px;
+                margin: 20px 0;
+            }
+
+            .scrambled-word {
+                font-size: 1.5rem;
+                letter-spacing: 0.2em;
+            }
+
+            .hint-text {
+                font-size: 1rem;
+            }
+
+            .input-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .word-input {
+                min-width: unset;
+                width: 100%;
+                font-size: 1.2rem;
+                padding: 12px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 12px;
+                font-size: 1rem;
+            }
+
+            .modal-content {
+                padding: 20px;
+                width: 95%;
+            }
+
+            .modal-title {
+                font-size: 2rem;
+            }
+
+            .modal-stats {
+                font-size: 1rem;
+            }
+
+            .start-screen {
+                padding: 40px 10px;
+            }
+
+            .start-screen h2 {
+                font-size: 1.5rem;
+            }
+
+            .start-screen p {
+                font-size: 1rem;
+            }
+        }
+
         /* Start Screen */
         .start-screen {
             text-align: center;
